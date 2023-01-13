@@ -7,9 +7,11 @@ app.use(bodyParser.json())
 
 const LoginRoute = require('./routes/Login');
 const SignUpRoute = require('./routes/SignUp');
+const HomeRoute = require('./routes/Home');
 
 app.use('/login',LoginRoute);
 app.use('/signup',SignUpRoute);
+app.use('/home',HomeRoute);
 
 app.get('/',(req,res) => {
     res.send('API is up and running. Jo krna hei kro');
