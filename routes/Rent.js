@@ -6,7 +6,7 @@ router.post('/', async (req, res) => {
     const newhistory = new History({
         email:req.query.email,
         petname:req.query.petname,
-        petcare:req.query.petcare,
+        petcare:false,
         category:req.query.category,
         duration:req.query.duration,
         date:req.query.date,
