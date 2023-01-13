@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const HistorySchema = new mongoose.Schema({
     email: String,
     petname: String,
+    petid: String,
     petcare: Boolean,
     category: String,
     duration: Number,

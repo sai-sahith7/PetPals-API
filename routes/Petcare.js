@@ -5,7 +5,8 @@ const History = require('../models/History');
 router.post('/', async (req, res) => {
     const newhistory = new History({
         email:req.query.email,
-        petname:req.query.petname,
+        petname:Pets.findOne({_id:req.query.petid}).name,
+        petid:req.query.petid,
         petcare:true,
         category:req.query.category,
         duration:req.query.duration,
