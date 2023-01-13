@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const History = require('../models/History');
+const Pets = require('../models/Pets');
 
 router.post('/', async (req, res) => {
     const newhistory = new History({
@@ -8,7 +9,7 @@ router.post('/', async (req, res) => {
         petname:Pets.findOne({_id:req.query.petid}).name,
         petid:req.query.petid,
         petcare:true,
-        category:req.query.category,
+        category:Pets.findOne({_id:req.query.petid}).category,
         duration:req.query.duration,
         date:req.query.date,
         status:'Applied',

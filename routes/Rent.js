@@ -9,7 +9,7 @@ router.post('/', async (req, res) => {
         petname:Pets.findOne({_id:req.query.petid}).name,
         petid:req.query.petid,
         petcare:false,
-        category:req.query.category,
+        category:Pets.findOne({_id:req.query.petid}).category,
         duration:req.query.duration,
         date:req.query.date,
         status:'Ordered',
