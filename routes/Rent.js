@@ -6,10 +6,10 @@ const Pets = require('../models/Pets');
 router.post('/', async (req, res) => {
     const newhistory = new History({
         email:req.query.email,
-        petname:Pets.findOne({_id:req.query.petid}).name,
+        petname:req.query.name,
         petid:req.query.petid,
         petcare:false,
-        category:Pets.findOne({_id:req.query.petid}).category,
+        category:req.query.category,
         duration:req.query.duration,
         date:req.query.date,
         status:'Ordered',
