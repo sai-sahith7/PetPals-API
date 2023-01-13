@@ -6,11 +6,11 @@ const PetsSchema = new mongoose.Schema({
     image: String,
     category: String,
     bio: String,
-    age: String,
+    age: Number,
     gender: String,
     colour: String,
     breed: String,
-    price: String
+    price: Number
 });
 
 module.exports = mongoose.model('Pets', PetsSchema);
