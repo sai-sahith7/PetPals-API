@@ -6,7 +6,7 @@ const UserInfoSchema = new mongoose.Schema({
     city: String,
     phone: Number,
     address: String,
-    Gender: String,
+    gender: String,
     age: Number,
     bio: String,
 });
