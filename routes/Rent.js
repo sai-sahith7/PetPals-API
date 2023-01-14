@@ -17,7 +17,7 @@ router.post('/', async (req, res) => {
         remarks:'-'
     });
     newhistory.save();
-    res.status(200).json(await History.find());
+    res.status(200).json({'status':'History created'});
 });
 
 module.exports = router;
