@@ -6,7 +6,7 @@ router.get('/', async (req, res) => {
     try
     {
         const user = await UserInfo.find({email:req.query.email});
-        res.json(user);
+        res.json(user[0]);
     }
     catch (err)
     {
