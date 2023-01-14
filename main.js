@@ -11,6 +11,7 @@ const HomeRoute = require('./routes/Home');
 const PetcareRoute = require('./routes/Petcare');
 const RentRoute = require('./routes/Rent');
 const HistoryRoute = require('./routes/History');
+const ProfileRoute = require('./routes/ProfileView');
 
 app.use('/login',LoginRoute);
 app.use('/signup',SignUpRoute);
@@ -18,6 +19,7 @@ app.use('/home',HomeRoute);
 app.use('/petcare',PetcareRoute);
 app.use('/rent',RentRoute);
 app.use('/history',HistoryRoute);
+app.use('/profile',ProfileRoute);
 
 app.get('/',(req,res) => {
     res.send('API is up and running. Jo krna hei kro');
