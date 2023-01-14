@@ -6,7 +6,7 @@ const Pets = require('../models/Pets');
 router.post('/', async (req, res) => {
     const newhistory = new History({
         email:req.query.email,
-        petname:req.query.name,
+        petname:req.query.petname,
         petid:req.query.petid,
         petcare:false,
         category:req.query.category,
@@ -17,7 +17,7 @@ router.post('/', async (req, res) => {
         remarks:'-'
     });
     newhistory.save();
-    res.status(200).json({'status':'History created'});
+    res.status(200).json(await History.find());
 });
 
 module.exports = router;
